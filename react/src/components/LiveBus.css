@@ -1,0 +1,32 @@
+.my-popup .leaflet-popup-tip-container {
+    top: 100%;
+}
+
+.my-popup .leaflet-popup-content {
+    margin: 8px;
+}
+
+.card-bus {
+    width: 200px;
+}
+
+.card-bus h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.card-bus img {
+    border-radius: 0.25rem;
+}
+
+
+.card-bus strong {
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.card-bus strong span {
+    font-size: 16px;
+    font-weight: 400;
+}

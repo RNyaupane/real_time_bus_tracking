@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.otp__code__container input {
+    border: 1px solid black;
+}
+
+.otp__code__container input:focus {
+    outline: 1px solid rgb(79, 79, 79);
+}
+
+nav {
+    /* background: rgba(255, 255, 255, 0.793); */
+    width: max-content;
+    display: block;
+    z-index: 2;
+    position: fixed;
+    right: -10%;
+    transform: translateX(-50%);
+    top: 2rem;
+    display: flex;
+    gap: 2.8rem;
+    border-radius: 3rem;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.sidebar {
+    /* background: rgba(255, 255, 255, 0.793); */
+    width: max-content;
+    display: block;
+    z-index: 2;
+    position: fixed;
+    left: 10%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 400px;
+    top: 20%;
+    display: flex;
+    gap: 2.8rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.dropbtn {
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border: 1px solid rgba(150, 147, 147, 0.698);
+}
+
+#myInput {
+    box-sizing: border-box;
+    background-image: url('searchicon.png');
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {
+    outline: 3px solid #ddd;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 230px;
+    overflow: auto;
+    border: 1px solid #ddd;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}

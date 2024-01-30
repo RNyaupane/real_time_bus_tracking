@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Happy</h1>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web-socket-js/1.0.0/web_socket.js"></script>
+
+    <div id="bus-locations"></div>
+
+    <script>
+        
+        // const socket = new WebSocket('ws://10.0.130.34:8081/ws'); // Connect to the WebSocket server
+        // WebSocket connection URL
+const websocketUrl = 'ws://10.0.130.34:8081/ws';
+
+      // Create a WebSocket instance
+      const websocket = new WebSocket(websocketUrl);
+
+      // Event listener for WebSocket connection open
+      websocket.onopen = function() {
+          console.log('WebSocket connection established');
+          
+          // Send a message once the connection is open
+          websocket.send('Hello from client!');
+      };
+
+      // Event listener for WebSocket message reception
+      websocket.onmessage = function(event) {
+          console.log('Received message:', event.data);
+      };
+
+      // Event listener for WebSocket connection close
+      websocket.onclose = function(event) {
+          console.log('WebSocket connection closed:', event.code, event.reason);
+      };
+
+      // Event listener for WebSocket errors
+      websocket.onerror = function(error) {
+          console.error('WebSocket error:', error);
+      };
+
+      // Function to send a message via WebSocket
+      function sendMessage(message) {
+          if (websocket.readyState === WebSocket.OPEN) {
+              websocket.send(message);
+              console.log('Message sent:', message);
+          } else {
+              console.error('WebSocket is not open');
+          }
+      }
+
+      // Close the WebSocket connection
+      function closeWebSocket() {
+          websocket.close();
+          console.log('WebSocket connection closed');
+      }
+
+
+     setInterval(() => {
+      console.log("HAPPY HACKING");
+      websocket.send("HI HACKING");
+     }, 500);
+    </script>
+</body>
+</html>
